@@ -1,10 +1,11 @@
 import './App.scss'
+import Home from './pages/Home/Home'
 
 const App = () => {
 
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <Home/>
     </div>
   )
 }

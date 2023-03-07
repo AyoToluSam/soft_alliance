@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  img {
+    max-width: 40px;
+    height: auto;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+
+  .input {
+    position: relative;
+
+    input {
+      padding: 0.5rem 1rem;
+      border: 1px solid #209CEE;
+      border-radius: 12px;
+    }
+    .inputIcon {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .userAccess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    .account {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #209CEE;
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+}
