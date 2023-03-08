@@ -1,0 +1,23 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .filterDrop {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    select {
+      border-radius: 20px;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+  }
+}

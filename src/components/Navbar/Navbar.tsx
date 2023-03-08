@@ -9,7 +9,8 @@ const Navbar = () => {
       <img src={logo} alt="logo" />
       <ul>
         <li><a href="">Home</a></li>
-        <li><a href="">Store</a></li>
+        <li><a href="">Categories</a></li>
+        <li><a href="">Deals</a></li>
         <li><a href="">About</a></li>
       </ul>
       <div className='input'>
@@ -22,8 +23,8 @@ const Navbar = () => {
           <p>Account</p>
         </div>
         <div className='cart'>
-          <FiShoppingCart/>
           <p>Cart</p>
+          <FiShoppingCart/>
         </div>
       </div>
     </nav>

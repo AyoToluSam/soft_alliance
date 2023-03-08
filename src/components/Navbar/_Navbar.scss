@@ -31,6 +31,7 @@
       top: 0.5rem;
       right: 1rem;
       cursor: pointer;
+      color: #209CEE;
     }
   }
 
@@ -54,8 +55,15 @@
       gap: 0.5rem;
       background-color: #209CEE;
       color: #fff;
-      border-radius: 12px;
+      border-radius: 20px;
       padding: 0.5rem 0.8rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid #209CEE;
+        color: #209CEE;
+      }
     }
   }
 }
