@@ -7,9 +7,12 @@ const Home = () => {
     <div className='home' >
       <header>
         <Navbar/>
+      </header>
+      <main>
         <Hero/>
         <Products/>
-      </header>
+      </main>
+      <footer></footer>
     </div>
   )
 }
