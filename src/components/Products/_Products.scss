@@ -41,6 +41,7 @@
       justify-content: space-between;
       gap: 0.5rem;
       border-radius: 12px;
+      cursor: pointer;
       
       .imageContainer {
         position: relative;
@@ -60,6 +61,16 @@
           top: 1rem;
           right: 1rem;
           cursor: pointer;
+        }
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          font-size: 12px;
         }
       }
 
@@ -84,6 +95,8 @@
         .allButtons {
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
           gap: 1rem;
 
           .quantityButtons {
@@ -99,10 +112,6 @@
             button {
               @include center;
             }
-          }
-
-          button {
-
           }
         }
       }

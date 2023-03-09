@@ -18,6 +18,7 @@ const Products = () => {
   } = useCart()
   
   return (
+    <>
     <section className='products'>
       <div className='filters'>
         <div className='filterDrop'>
@@ -33,19 +34,27 @@ const Products = () => {
         {products.map((product) => {
           const quantity = getItemQuantity(product.id);
           return (
-            <div key={product.id} className="productCard" >
+            <div 
+              key={product.id} 
+              className="productCard" 
+            >
               <div className='imageContainer'>
                 <div className='heart'>
                   <AiOutlineHeart/>
                 </div>
-                <img src={product.image} alt={product.title} />
+                <img src={product.image} alt={product.title}
+                  title='View Details'
+                />
               </div>
-              <h5>{product.title}</h5>
-              <StarRatings
-                rating={product.rating.rate}
-                starDimension="12px"
-                starSpacing="3px"
-              />
+              <h5 title='View Details'>{product.title}</h5>
+              <div className='rating'>
+                <StarRatings
+                  rating={product.rating.rate}
+                  starDimension="12px"
+                  starSpacing="3px"
+                />
+                <p>({product.rating.count})</p>
+              </div>
               <h5>{formatCurrency(product.price)}</h5>
               <div className='buttonContainer'>
                 {
@@ -66,6 +75,7 @@ const Products = () => {
         })}      
       </div>
     </section>
+    </>
   )
 }
 

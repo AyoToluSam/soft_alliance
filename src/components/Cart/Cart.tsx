@@ -1,4 +1,5 @@
 import {IoMdClose} from 'react-icons/io'
+import {MdDelete} from 'react-icons/md'
 import { useCart } from '../../contexts/CartContext'
 import { formatCurrency } from '../../utilities/formatCurrency'
 
@@ -29,7 +30,7 @@ const Cart = () => {
                   </p>
                 }
                 <span className='itemPrice' >{formatCurrency(cartItem.price * item.quantity)}</span>
-                <button className='remove' onClick={() => removeFromCart(item.id)}>x</button>
+                <button className='remove' onClick={() => removeFromCart(item.id)}><MdDelete/></button>
               </li>
             )
           })
