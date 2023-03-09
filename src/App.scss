@@ -4,6 +4,17 @@
   overflow: auto;
 }
 
+$blue : #209CEE;
+$red : #f01e2c;
+$box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
 
@@ -29,4 +40,6 @@
 @import './components/Navbar/Navbar',
 './components/Hero/Hero',
 './components/Products/Products',
+'./components/Layout/Layout',
+'./components/Cart/Cart',
 './pages/Home/Home';

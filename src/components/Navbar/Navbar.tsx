@@ -2,8 +2,12 @@ import logo from '../../assets/Soft-Logo.png';
 import { RiUser3Line } from 'react-icons/ri';
 import { FiShoppingCart } from 'react-icons/fi';
 import { BiSearch } from 'react-icons/bi';
+import { useCart } from '../../contexts/CartContext';
 
 const Navbar = () => {
+
+  const { openCart, cartQuantity } = useCart()
+
   return (
     <nav className='navbar'>
       <img src={logo} alt="logo" />
@@ -22,7 +26,7 @@ const Navbar = () => {
           <RiUser3Line/>
           <p>Account</p>
         </div>
-        <div className='cart'>
+        <div className='cartButton' onClick={() => openCart()}>
           <p>Cart</p>
           <FiShoppingCart/>
         </div>

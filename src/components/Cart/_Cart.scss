@@ -1,0 +1,101 @@
+.cartContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+  height: 100vh;
+  min-width: 50vw;
+  background-color: #f2f2f2;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  .close {
+    position: fixed;
+    @include center;
+    right: 2rem;
+    top: 1.2rem;
+    font-size: 1.5rem;
+    color: $blue;
+    border: 1px solid $blue;
+    padding: 0.2rem 0.4rem;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      margin-bottom: 10px;
+            
+      .itemName {
+        font-weight: bold;
+      }
+
+      .itemPrice {
+        margin-left: 10px;
+      }
+
+      .remove {
+        background-color: darkred;
+        padding: 0.2rem 0.4rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .totalContainer {
+    display: flex;
+    justify-content: space-between;
+    
+    .cartTotal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+    .removeAll {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: darkred;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  
+  .checkoutButton {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    button {
+      font-weight: bold;
+      padding: 0.5rem 2rem;
+      border: 1px solid;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
