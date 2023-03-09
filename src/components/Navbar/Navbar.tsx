@@ -29,6 +29,10 @@ const Navbar = () => {
         <div className='cartButton' onClick={() => openCart()}>
           <p>Cart</p>
           <FiShoppingCart/>
+          {
+            cartQuantity > 0 &&
+            <div className='cartQuantity'>{cartQuantity}</div>
+          }
         </div>
       </div>
     </nav>

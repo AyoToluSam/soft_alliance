@@ -1,15 +1,13 @@
 import { BsFilterSquare } from 'react-icons/bs'
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
-import { Iproducts } from '../../constants/types'
+import { AiOutlineHeart } from 'react-icons/ai'
+import { FaMinus, FaPlus } from 'react-icons/fa'
 import { useCart } from '../../contexts/CartContext'
 import { formatCurrency } from '../../utilities/formatCurrency'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import StarRatings from 'react-star-ratings'
+
 
 
 const Products = () => {
-
-  const [clicked, setClicked] = useState(false)
 
   const {
     getItemQuantity, 
@@ -37,25 +35,27 @@ const Products = () => {
           return (
             <div key={product.id} className="productCard" >
               <div className='imageContainer'>
-                <div>
-                  {
-
-                  }
+                <div className='heart'>
+                  <AiOutlineHeart/>
                 </div>
                 <img src={product.image} alt={product.title} />
               </div>
-              <h2>{product.title}</h2>
-              <p>{formatCurrency(product.price)}</p>
-              <Link to={`/market/product/${product.id}`}>View Details</Link>
-              <div>
+              <h5>{product.title}</h5>
+              <StarRatings
+                rating={product.rating.rate}
+                starDimension="12px"
+                starSpacing="3px"
+              />
+              <h5>{formatCurrency(product.price)}</h5>
+              <div className='buttonContainer'>
                 {
                   quantity === 0 ?
-                  (<button onClick={() => increaseItemQuantity(product.id)}> + Add To Cart</button>) : 
+                  (<button onClick={() => increaseItemQuantity(product.id)}> Add To Cart</button>) : 
                   (<div className='allButtons'>
                     <div className='quantityButtons'>
-                      <button onClick={() => decreaseItemQuantity(product.id)}>-</button>
+                      <button onClick={() => decreaseItemQuantity(product.id)}><FaMinus/></button>
                       <p><span>{quantity}</span>in cart</p>
-                      <button onClick={() => increaseItemQuantity(product.id)}>+</button>
+                      <button onClick={() => increaseItemQuantity(product.id)}><FaPlus/></button>
                     </div>
                     <button onClick={() => removeFromCart(product.id)}>Remove</button>
                   </div>)

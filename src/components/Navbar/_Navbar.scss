@@ -59,6 +59,7 @@
     }
 
     .cartButton {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,6 +75,24 @@
         border: 1px solid $blue;
         color: $blue;
         padding: calc(0.5rem - 1px) calc(0.8rem - 1px);
+      }
+
+      .cartQuantity {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $red;
+        width: 1.4rem;
+        height: 1.4rem;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        transform: translate(43.75%, 43.75%);
       }
     }
   }
