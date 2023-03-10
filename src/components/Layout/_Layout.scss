@@ -1,5 +1,9 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .footer {
@@ -16,20 +20,21 @@
   gap: 2rem;
 
   @media screen and (max-width: 680px) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 1rem;
+    padding: 2rem;
   }
 
   .contact {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 
     @media screen and (max-width: 680px) {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       gap: 1rem;
     }
@@ -41,9 +46,6 @@
 
     p {
       max-width: 240px;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #fff;
-      margin-bottom: 1rem;
       @media screen and (max-width: 680px) {
         padding: 0;
         border-bottom: none;
@@ -68,42 +70,43 @@
     }
   }
 
+  .help {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-  .helpAbout {
+    ul {
+      padding-left: 0.5rem;
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 0.5rem;
       
-      @media screen and (max-width: 680px) {
-        width: 100%;
-        justify-content: space-between;
+      li {
+        list-style: circle;
       }
+    }
 
-      .help {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    
-        ul {
-          padding-left: 0.5rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-    
-        }
+    @media screen and (max-width: 680px) {
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    ul {
+      padding-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      
+      li {
+        list-style: circle;
       }
+    }
     
-      .about {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    
-        ul {
-          padding-left: 0.5rem;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-    
-        }
-      }
+    @media screen and (max-width: 680px) {
+    }
   }
 }
