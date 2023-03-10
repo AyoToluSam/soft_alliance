@@ -37,25 +37,27 @@ const Layout = ({children}: LayoutProps) => {
             <FiTwitter/>
           </div>
         </div>
-        <div className='help'>
-          <h3>Get Help</h3>
-          <ul>
-            <li>Contact us</li>
-            <li>About us</li>
-            <li>Return policy</li>
-            <li>Privacy policy</li>
-            <li>Payment policy</li>
-          </ul>
-        </div>
-        <div className='about'>
-          <h3>About us</h3>
-          <ul>
-            <li>News</li>
-            <li>Service</li>
-            <li>Our Policy</li>
-            <li>Customer care</li> 
-            <li>Faq's</li>
-          </ul>
+        <div className='helpAbout'>
+          <div className='help'>
+            <h3>Get Help</h3>
+            <ul>
+              <li>Contact us</li>
+              <li>About us</li>
+              <li>Return policy</li>
+              <li>Privacy policy</li>
+              <li>Payment policy</li>
+            </ul>
+          </div>
+          <div className='about'>
+            <h3>About us</h3>
+            <ul>
+              <li>News</li>
+              <li>Service</li>
+              <li>Our Policy</li>
+              <li>Customer care</li> 
+              <li>Faq's</li>
+            </ul>
+          </div>
         </div>
       </footer>
     </div>

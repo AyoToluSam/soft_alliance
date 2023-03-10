@@ -30,6 +30,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
       gap: 1rem;
     }
   
@@ -47,7 +48,6 @@
         padding: 0;
         border-bottom: none;
         margin-bottom: 0;
-        max-width: max-content;
       }
     }
 
@@ -68,44 +68,39 @@
     }
   }
 
-  .help {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 
-    ul {
-      padding-left: 0.5rem;
+  .helpAbout {
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      @media screen and (max-width: 680px) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        text-align: left;
-      }
-    }
-  }
+      justify-content: space-between;
+      width: 100%;
+      gap: 2rem;
 
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    ul {
-      padding-left: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      @media screen and (max-width: 680px) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+      .help {
+        display: flex;
+        flex-direction: column;
         gap: 0.5rem;
+    
+        ul {
+          padding-left: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+    
+        }
       }
-    }
+    
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    
+        ul {
+          padding-left: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+    
+        }
+      }
   }
 }
