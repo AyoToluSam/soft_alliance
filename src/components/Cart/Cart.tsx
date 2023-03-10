@@ -23,17 +23,21 @@ const Cart = () => {
 
             return (
               <li key={item.id}>
-                <div className='cartImage'>
-                  <img src={cartItem.image} alt={cartItem.title} />
+                <div className='leftDiv'>
+                  <div className='cartImage'>
+                    <img src={cartItem.image} alt={cartItem.title} />
+                  </div>
+                  <span className='itemName' >{cartItem.title}</span>
+                  {item.quantity > 1 &&
+                    <p>
+                      x{item.quantity}
+                    </p>
+                  }
                 </div>
-                <span className='itemName' >{cartItem.title}</span>
-                {item.quantity > 1 &&
-                  <p>
-                    x{item.quantity}
-                  </p>
-                }
-                <span className='itemPrice' >{formatCurrency(cartItem.price * item.quantity)}</span>
-                <button className='remove' onClick={() => removeFromCart(item.id)}><MdDelete/></button>
+                <div className='rightDiv'>
+                  <span className='itemPrice' >{formatCurrency(cartItem.price * item.quantity)}</span>
+                  <button className='remove' onClick={() => removeFromCart(item.id)}><MdDelete/></button>
+                </div>
               </li>
             )
           })
