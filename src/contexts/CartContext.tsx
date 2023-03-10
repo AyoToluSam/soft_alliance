@@ -43,8 +43,7 @@ export const useCart = () => {
   )
 }
 
-//A wrapper component that returns the context provider. This is useful 
-//for passing other components or data to the context provider.
+//A wrapper component that returns the context provider.
 
 export const CartProvider = ({children}: CartProviderProps) => {
 
