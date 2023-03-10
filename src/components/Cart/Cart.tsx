@@ -10,10 +10,12 @@ const Cart = () => {
 
   return (
     <div className='cartContainer'>
-      <div className='close' onClick={() => closeCart()} >
-        <IoMdClose/>
+      <div className='cartHeader'>
+        <h2>Cart</h2>
+        <div className='close' onClick={() => closeCart()} >
+          <IoMdClose/>
+        </div>
       </div>
-      <h2>Cart</h2>
       <ul>
         {cartItems.length > 0 &&
           cartItems.map((item) => {

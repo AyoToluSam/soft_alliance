@@ -10,7 +10,6 @@ html {
 
 html::-webkit-scrollbar {
   width: 4px;
-  height: 16px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -18,6 +17,7 @@ html::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb {
   background-color: grey;
   border-radius: 4px;
+  max-height: 24px;
 }
 
 body {
