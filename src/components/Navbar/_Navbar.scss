@@ -15,10 +15,29 @@
     align-items: center;
     gap: 2rem;
 
+    @media screen and (max-width: 920px) {
+      gap: 1rem;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+
     li {
       &:hover {
         color: $blue;
+        transform: scale(1.1);
+        transition: 0.2s ease;
       }
+    }
+  }
+
+  .smallScreen {
+    display: none;
+    @media screen and (max-width: 640px) {
+      display: flex;
+      border: none;
+      font-weight: bold;
     }
   }
 
@@ -38,6 +57,10 @@
       cursor: pointer;
       color: $blue;
     }
+
+    @media screen and (max-width: 920px) {
+      display: none;
+    }
   }
 
   .userAccess {
@@ -55,6 +78,13 @@
       &:hover {
         cursor: pointer;
         color: $blue;
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+      }
+      p {
+        @media screen and (max-width: 920px) {
+          display: none;
+        }
       }
     }
 
@@ -69,6 +99,10 @@
       border-radius: 20px;
       padding: 0.5rem 0.8rem;
       cursor: pointer;
+
+      @media screen and (max-width: 920px) {
+        font-size: 12px;
+      }
 
       &:hover {
         background-color: transparent;
@@ -93,6 +127,11 @@
         border: none;
         border-radius: 50%;
         transform: translate(43.75%, 43.75%);
+
+        @media screen and (max-width: 920px) {
+          font-size: 12px;
+          padding: 0.2rem;
+        }
       }
     }
   }

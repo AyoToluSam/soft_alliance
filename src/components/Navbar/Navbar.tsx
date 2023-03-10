@@ -17,6 +17,12 @@ const Navbar = () => {
         <li><a href="">Deals</a></li>
         <li><a href="">About</a></li>
       </ul>
+      <select className='smallScreen' defaultValue="Home" name="" id="">
+        <option value="">Home</option>
+        <option value="">Categories</option>
+        <option value="">Deals</option>
+        <option value="">About</option>
+      </select>
       <div className='input'>
         <input type="text" placeholder='Search Products' />
         <BiSearch className='inputIcon'/>

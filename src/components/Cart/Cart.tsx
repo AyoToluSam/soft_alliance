@@ -13,7 +13,7 @@ const Cart = () => {
       <div className='close' onClick={() => closeCart()} >
         <IoMdClose/>
       </div>
-      <h2>Your Cart</h2>
+      <h2>Cart</h2>
       <ul>
         {cartItems.length > 0 &&
           cartItems.map((item) => {
@@ -23,6 +23,9 @@ const Cart = () => {
 
             return (
               <li key={item.id}>
+                <div className='cartImage'>
+                  <img src={cartItem.image} alt={cartItem.title} />
+                </div>
                 <span className='itemName' >{cartItem.title}</span>
                 {item.quantity > 1 &&
                   <p>
@@ -37,13 +40,13 @@ const Cart = () => {
         }
       </ul>
       <div className='totalContainer'>
-        <div className='cartTotal' >
+        <h2 className='cartTotal' >
           Total: {formatCurrency(cartItems.reduce(
           (total, cartItem) => {
             const item = products.find(item => item.id === cartItem.id)
             return total + (item?.price || 0) * cartItem.quantity
           }, 0))}
-        </div>
+        </h2>
         <button className='removeAll' onClick={() => removeAll()} >Remove all</button>
       </div>
       <div className='checkoutButton' >
