@@ -1,6 +1,6 @@
 # Soft Alliance
 
-This project was developed by me as an Assessment for Frontend Development role at Soft Alliance.
+This project was developed by me as an Assessment for a Frontend Development role at Soft Alliance.
 
 ## Technologies used
 
